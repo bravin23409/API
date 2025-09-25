@@ -25,12 +25,13 @@ $layouts
         $stmt->execute();
 
         // Success message
-        echo "<p style='color:green; font-weight:bold;'>
+        echo "<p style='color:yellow
+; font-weight:bold;'>
                 Welcome {$userName}, a confirmation email has been sent to {$userEmail}.
               </p>";
 
     } else {
-        echo "<p style='color:red;'>Invalid name or email.</p>";
+        echo "<p style='color:red;'>Not available name or email.</p>";
     }
 }
 
