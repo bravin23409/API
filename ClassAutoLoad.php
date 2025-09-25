@@ -15,7 +15,7 @@ spl_autoload_register(function ($class_name) use ($directory) {
             return;
         }
     }
-};
+});
 
 // create an instance of the class
 $ObjSendMail = new SendMail();
