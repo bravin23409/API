@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </p>";
 
     } else {
-        echo "<p style='color:black;'>Invalid name or email.</p>";
+        echo "<p style='color:red;'>Invalid name or email.</p>";
     }
 }
 
