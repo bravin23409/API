@@ -17,7 +17,7 @@ $options = [
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    die("⚠️ Database connection failed: " . htmlspecialchars($e->getMessage()));
+    die("❌Database connection failed: " . htmlspecialchars($e->getMessage()));
 }
 
 // Fetch users ordered by ID (ascending = oldest to newest signups)
