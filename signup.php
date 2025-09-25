@@ -2,20 +2,7 @@
 require 'ClassAutoLoad.php';
 require 'dbConnect.php';
 // pick up objects (adjust if your autoloader uses ObjLayouts/ObjForms)
-$layouts = $layouts ?? ($ObjLayouts ?? null);
-$forms   = $forms   ?? ($ObjForms   ?? null);
-$ObjSendMail = $ObjSendMail ?? null;
-
-// show page header
-$layouts->header($conf);
-
-// handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userName  = $_POST['name'] ?? '';
-    $userEmail = $_POST['email'] ?? '';
-
-    if (!empty($userName) && filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
-        $mailCnt = [
+$layouts
             'name_from' => 'BBIT Systems Admin',
             'mail_from' => 'bravin.too@strathmore.edu',
             'name_to'   => $userName,
